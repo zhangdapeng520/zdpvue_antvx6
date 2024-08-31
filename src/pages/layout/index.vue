@@ -18,7 +18,7 @@
       <a-layout-content
           :style="{ margin: 0, padding: 0, background: '#fff', minHeight: '100vh' }"
       >
-        Content
+        <RouterView/>
       </a-layout-content>
     </a-layout>
   </a-layout>
