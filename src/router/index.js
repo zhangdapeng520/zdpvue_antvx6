@@ -11,6 +11,10 @@ const routes = [
                 path: '/index',
                 component: () => import('../pages/index/index.vue'),
             },
+            {
+                path: '/graph_width',
+                component: () => import('../pages/graph_width/index.vue'),
+            },
         ]
     },
 ]

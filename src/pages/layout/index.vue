@@ -2,12 +2,12 @@
   <a-layout>
     <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
       <div class="logo"/>
-      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline">
-        <a-menu-item key="1">
-          <span>nav 1</span>
+      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline" @click="handleMenuClick">
+        <a-menu-item key="/">
+          <span>快速上手</span>
         </a-menu-item>
-        <a-menu-item key="2">
-          <span>nav 2</span>
+        <a-menu-item key="/graph_width">
+          <span>画布大小</span>
         </a-menu-item>
         <a-menu-item key="3">
           <span>nav 3</span>
@@ -21,13 +21,20 @@
         <RouterView/>
       </a-layout-content>
     </a-layout>
+    ≤
   </a-layout>
 </template>
 <script setup>
 import {ref} from 'vue';
+import {useRouter} from "vue-router";
 
 const selectedKeys = ref(['1']);
 const collapsed = ref(false);
+const router = useRouter() // 路由对象
+// 菜单点击事件
+const handleMenuClick = ({item, key, keyPath}) => {
+  router.push(key)
+}
 </script>
 <style>
 </style>

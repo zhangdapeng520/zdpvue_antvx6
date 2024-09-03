@@ -64,6 +64,7 @@ const data = {
 onMounted(() => {
   const graph = new Graph({
     container: document.getElementById('container'),
+    autoResize: true,
     width: 800,
     height: 600,
     background: {
@@ -87,7 +88,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="container"></div>
+  <div style="width:100%; height:100%">
+    <div id="container"></div>
+  </div>
 </template>
 
 <style scoped>
