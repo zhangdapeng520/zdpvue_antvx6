@@ -9,8 +9,8 @@
         <a-menu-item key="/graph_width">
           <span>画布大小</span>
         </a-menu-item>
-        <a-menu-item key="3">
-          <span>nav 3</span>
+        <a-menu-item key="/update_node">
+          <span>修改节点</span>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>

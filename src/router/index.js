@@ -15,6 +15,10 @@ const routes = [
                 path: '/graph_width',
                 component: () => import('../pages/graph_width/index.vue'),
             },
+            {
+                path: '/update_node',
+                component: () => import('../pages/update_node/index.vue'),
+            },
         ]
     },
 ]
